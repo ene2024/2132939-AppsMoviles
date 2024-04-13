@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,13 +8,15 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {
-    console.log("MiComponenteComponent: Constructor");
+  constructor(private navCtrl: NavController) {}
+
+  irAFormulario() {
+    this.navCtrl.navigateForward('/formulario');
   }
+  
 
 
-
-  title: string = "Mi nueva pagina!";
+  title: string = "Mi App Tareas";
 
   //hazmeClic(): void{
     //alert("Hiciste clic!");

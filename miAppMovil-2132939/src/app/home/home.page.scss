@@ -1,6 +1,25 @@
+ion-content {
+  --ion-background-color: #ffffff; /* Color de fondo blanco */
+
+}
+
+/* Estilos para el contenedor del botón flotante */
+.floating-button-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999; /* Asegura que esté por encima del resto del contenido */
+}
+
+/* Estilos para el botón flotante */
+.floating-button {
+  width: 60px;
+  height: 60px;
+}
+
 #container {
   text-align: center;
-
+  
   position: absolute;
   left: 0;
   right: 0;

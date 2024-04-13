@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="tertiary">
+    <ion-title>
+      Agregar Tarea
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" text-center>
+  <ion-input label="Nombre de la tarea" label-placement="floating" fill="outline" placeholder="Ingrese el nombre de la tarea"></ion-input>
+
+  <ion-item lines="none">
+    <ion-label>Seleccionar mes</ion-label>
+    <ion-select placeholder="Mes" [(ngModel)]="mesSeleccionado">
+      <ion-select-option value="1">Enero</ion-select-option>
+      <ion-select-option value="2">Febrero</ion-select-option>
+      <ion-select-option value="3">Marzo</ion-select-option>
+      <ion-select-option value="4">Abril</ion-select-option>
+      <ion-select-option value="5">Mayo</ion-select-option>
+      <ion-select-option value="6">Junio</ion-select-option>
+      <ion-select-option value="7">Julio</ion-select-option>
+      <ion-select-option value="8">Agosto</ion-select-option>
+      <ion-select-option value="9">Septiembre</ion-select-option>
+      <ion-select-option value="10">Octubre</ion-select-option>
+      <ion-select-option value="11">Noviembre</ion-select-option>
+      <ion-select-option value="12">Diciembre</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label>Seleccionar año</ion-label>
+    <ion-select placeholder="Año" [(ngModel)]="anoSeleccionado">
+      <ion-select-option value="2024">2024</ion-select-option>
+      <ion-select-option value="2025">2025</ion-select-option>
+      <ion-select-option value="2026">2026</ion-select-option>
+      <ion-select-option value="2027">2027</ion-select-option>
+      <ion-select-option value="2028">2028</ion-select-option>
+      <ion-select-option value="2029">2029</ion-select-option>
+      
+    </ion-select>
+  </ion-item>
+
+  <ion-textarea label="Descripción" labelPlacement="floating" fill="solid" placeholder="Ingrese la descripción de la tarea"></ion-textarea>
+
+  <ion-button expand="block" (click)="irAHome()">Agregar Tarea</ion-button>
+</ion-content>
+
