@@ -1,17 +1,59 @@
 ion-content {
-  --ion-background-color: #ffffff; /* Color de fondo blanco */
-
+  --ion-background-color: #ffffff; 
 }
 
-/* Estilos para el contenedor del botón flotante */
+ion-modal {
+  --ion-background-color: #ffffff; 
+  z-index: 9999; 
+}
+
+ion-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  padding-left: 12px; 
+  padding-top: 12px;
+}
+
+ion-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 10px;
+}
+
+ion-card-content {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.fecha {
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+
+
+
+
+.card {
+  margin-bottom: 15px;
+}
+
+.card-content {
+  white-space: normal; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  height: auto; 
+}
+
+
 .floating-button-container {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 999; /* Asegura que esté por encima del resto del contenido */
+  z-index: 999; 
 }
 
-/* Estilos para el botón flotante */
 .floating-button {
   width: 60px;
   height: 60px;
