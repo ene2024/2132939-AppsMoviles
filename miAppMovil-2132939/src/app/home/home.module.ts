@@ -6,6 +6,8 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { MiComponenteComponent } from '../mi-componente/mi-componente.component';
 import { FormularioComponent } from '../formulario/formulario.component';
+import { VistaTareasComponent } from '../vista-tareas/vista-tareas.component';
+import { AgregarTareaComponent } from '../agregar-tarea/agregar-tarea.component'; 
 
 
 
@@ -18,7 +20,7 @@ import { FormularioComponent } from '../formulario/formulario.component';
     HomePageRoutingModule
   ],
   declarations: [HomePage,
-    MiComponenteComponent, FormularioComponent],
+    MiComponenteComponent, FormularioComponent, VistaTareasComponent, AgregarTareaComponent],
 
 })
 export class HomePageModule {}

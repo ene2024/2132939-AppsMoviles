@@ -1,0 +1,29 @@
+<ion-card *ngFor="let tarea of tareas; let i = index" color="success">
+  <ion-card-title>{{ tarea.titulo }}</ion-card-title>
+    <ion-card-content>
+    Fecha: {{ tarea.fecha }}
+  </ion-card-content>
+  <ion-card-content>
+    <ion-accordion-group>
+      <ion-accordion value="first">
+        <ion-item slot="header" color="success">
+          <ion-label>+ Ver mas Detalles</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          {{ tarea.descripcion }}
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </ion-card-content>
+  <ion-button fill="clear" (click)="eliminarTarea(i)">Eliminar Tarea</ion-button>
+</ion-card>
+
+<div class="floating-button-container">
+  <ion-button id="open-modal" expand="block" (click)="openModal()" shape="round" color="primary" class="floating-button">+</ion-button>
+</div>
+
+<ion-modal [animated]="true" (willDismiss)="onWillDismiss($event)">
+  <ng-template>
+    <app-agregar-tarea></app-agregar-tarea>
+  </ng-template>
+</ion-modal>

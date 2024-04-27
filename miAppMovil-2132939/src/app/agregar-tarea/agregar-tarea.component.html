@@ -1,0 +1,53 @@
+<ion-header>
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-button (click)="cancel()">Cancel</ion-button>
+  </ion-buttons>
+  <ion-title>Nueva Tarea</ion-title>
+  <ion-buttons slot="end">
+    <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+  </ion-buttons>
+</ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+<ion-item>
+  <ion-label position="stacked">Nombre de la tarea</ion-label>
+  <ion-input placeholder="Ingrese el nombre de la tarea" [(ngModel)]="name"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label>Seleccionar mes</ion-label>
+  <ion-select placeholder="Mes" [(ngModel)]="mesSeleccionado">
+    <ion-select-option value="1">Enero</ion-select-option>
+    <ion-select-option value="2">Febrero</ion-select-option>
+    <ion-select-option value="3">Marzo</ion-select-option>
+    <ion-select-option value="4">Abril</ion-select-option>
+    <ion-select-option value="5">Mayo</ion-select-option>
+    <ion-select-option value="6">Junio</ion-select-option>
+    <ion-select-option value="7">Julio</ion-select-option>
+    <ion-select-option value="8">Agosto</ion-select-option>
+    <ion-select-option value="9">Septiembre</ion-select-option>
+    <ion-select-option value="10">Octubre</ion-select-option>
+    <ion-select-option value="11">Noviembre</ion-select-option>
+    <ion-select-option value="12">Diciembre</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label>Seleccionar año</ion-label>
+  <ion-select placeholder="Año" [(ngModel)]="anoSeleccionado">
+    <ion-select-option value="2024">2024</ion-select-option>
+    <ion-select-option value="2025">2025</ion-select-option>
+    <ion-select-option value="2026">2026</ion-select-option>
+    <ion-select-option value="2027">2027</ion-select-option>
+    <ion-select-option value="2028">2028</ion-select-option>
+    <ion-select-option value="2029">2029</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<ion-item>
+  <ion-label position="stacked">Descripción</ion-label>
+  <ion-textarea placeholder="Ingrese la descripción de la tarea" [(ngModel)]="descripcionTarea"></ion-textarea>
+</ion-item>
+</ion-content>
