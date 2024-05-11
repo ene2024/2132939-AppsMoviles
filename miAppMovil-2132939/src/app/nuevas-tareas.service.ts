@@ -16,6 +16,10 @@ export class NuevasTareasService {
     return this.tareas;
   }
 
+  obtenerTareaPorId(id: number) {
+    return this.tareas.find(tarea => tarea.id === id);
+  }
+
   eliminarTarea(index: number) {
     if (index >= 0 && index < this.tareas.length) {
       this.tareas.splice(index, 1);

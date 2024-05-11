@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Detalles de la Tarea
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-img src="https://tecnologiaminera.com/imgPosts/1585058175ibKxt3Ee.jpeg" alt="Imagen de la tarea"></ion-img>
+  <ion-card>
+    <ion-card-header>
+      Detalles de la Tarea
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list lines="full">
+        <ion-item>
+          <ion-label>Título:</ion-label>
+          <ion-text>{{ tarea?.titulo }}</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label>Fecha:</ion-label>
+          <ion-text>{{ tarea?.fecha }}</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label>Descripción:</ion-label>
+          <ion-text>{{ tarea?.descripcion }}</ion-text>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

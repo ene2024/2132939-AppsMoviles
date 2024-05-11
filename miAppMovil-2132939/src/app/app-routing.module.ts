@@ -4,15 +4,19 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
-    path: 'formulario', // Usa la ruta relativa correcta hacia el componente de la página del formulario
-    loadChildren: () => import('./formulario/formulario.module').then( m => m.FormularioPageModule)
+    path: 'formulario',
+    loadChildren: () => import('./formulario/formulario.module').then(m => m.FormularioPageModule)
   },
   {
-    path: '',
-    redirectTo: 'home',
+    path: 'vista-detalles/:id', // Agrega ":id" para recibir el parámetro de ID
+    loadChildren: () => import('./vista-detalles/vista-detalles.module').then(m => m.VistaDetallesPageModule)
+  },
+  {
+    path: '', 
+    redirectTo: 'home', 
     pathMatch: 'full'
   },
 ];
@@ -24,5 +28,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
 
 

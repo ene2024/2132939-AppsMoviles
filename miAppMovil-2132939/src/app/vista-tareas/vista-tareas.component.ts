@@ -3,8 +3,10 @@ import { IonModal, ModalController } from '@ionic/angular';
 import { NuevasTareasService } from '../nuevas-tareas.service';
 import {AgregarTareaComponent} from '../agregar-tarea/agregar-tarea.component'
 import { OverlayEventDetail } from '@ionic/core/components';
+import { Router } from '@angular/router';
 
 interface Tarea {
+  id: number;
   titulo: string;
   descripcion: string;
   fecha: string;
@@ -24,8 +26,13 @@ export class VistaTareasComponent implements OnInit {
   title: string = "Mi App Tareas";
   tareas: Tarea[] = [];
   
+  verDetalles(id: number) {
+    // Aquí puedes navegar a la página vista-detalles pasando el ID de la tarea como parámetro
+    this.router.navigate(['/vista-detalles', id]);
+  }
+  
 
-  constructor(private nuevasTareasService: NuevasTareasService, private modalController: ModalController) {
+  constructor(private nuevasTareasService: NuevasTareasService, private modalController: ModalController, private router: Router) {
    
    }
 
@@ -36,6 +43,7 @@ export class VistaTareasComponent implements OnInit {
   async obtenerTareas() {
     this.tareas = this.nuevasTareasService.obtenerTareas();
   }
+  
 
   async openModal() {
     const modal = await this.modalController.create({
