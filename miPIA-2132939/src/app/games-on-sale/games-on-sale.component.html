@@ -1,0 +1,21 @@
+<ion-list class="custom-list">
+  <ion-item *ngFor="let item of items" (click)="openModal(item)" class="horizontal-item">
+    <ion-thumbnail slot="start" class="thumbnail">
+      <img [src]="item.imageUrl" class="thumbnail-img">
+      <div class="price-bar">
+        <div class="discount">{{item.discount}}% off</div> <!-- Aplica la clase discount -->
+        <div class="prices"> <!-- Contenedor para precio y precio final -->
+          <p class="price">{{ item.price }}</p> <!-- Aplica la clase price -->
+          <p class="final-price">{{item.finalprice}}</p> <!-- Aplica la clase final-price -->
+        </div>
+      </div>
+    </ion-thumbnail>
+  </ion-item>
+</ion-list>
+
+
+
+
+
+
+

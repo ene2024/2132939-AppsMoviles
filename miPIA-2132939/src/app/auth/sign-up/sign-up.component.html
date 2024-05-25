@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Sign Up</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Sign Up</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form (submit)="signUp($event)">
+        <ion-item>
+          <ion-label position="floating">Your email</ion-label>
+          <ion-input type="email" #email required></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" #password required></ion-input>
+        </ion-item>
+
+        <ion-button expand="block" type="submit">Sign Up</ion-button>
+      </form>
+
+      <p class="ion-text-center">
+        Do you already have an account? 
+        <a routerLink="/login">Log In</a>
+      </p>
+    </ion-card-content>
+  </ion-card>
+

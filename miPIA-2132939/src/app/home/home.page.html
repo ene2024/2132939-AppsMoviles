@@ -1,0 +1,15 @@
+<ion-header collapse="fade">
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar animated="true" placeholder="Buscar"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-img [src]="imageHome" alt="Principal"></ion-img>
+  <app-games-on-sale></app-games-on-sale>
+  <app-games-list></app-games-list>
+</ion-content>
